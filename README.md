@@ -11,7 +11,7 @@ Vi kommmer genom workshopen att steg för steg bygga på Azure Arc och se vad f�
 
 
 ## Struktur
-Workshoppen är uppdelad att vi först kommer titta på vad som går att göra med Azure Arc enabled server utan att lägga på extensio (framförallt extensions som kommer med kostnad) och sedan titta vidare på de olika möjligheterna som kommer med det. 
+Workshoppen är uppdelad att vi först kommer titta på vad som går att göra med Azure Arc enabled server utan att lägga på extensions (framförallt extensions som kommer med kostnad) och sedan titta vidare på de olika möjligheterna som kommer med det. 
 
 
 > [!IMPORTANT]  

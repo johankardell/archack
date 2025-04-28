@@ -21,7 +21,7 @@ Workshoppen är uppdelad att vi först kommer titta på vad som går att göra m
 Med allt sagt, låt oss hoppa till första [Steg 1: Intro Arc](./Challenge1.md)!
 
 ### Challenges
-- [Challenge 1: Intro Arc](./Challenge1.md)
+- [Challenge 1: Intro Arc & Azure Jumpstart](./Challenge1.md)
 - [Challenge 2: Resource Graph med Arc](./Challenge2.md)
 - [Challenge 3: Tags](./Challenge3.md)
 - [Challenge 4: Monitor](./Challenge4.md)

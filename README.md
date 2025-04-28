@@ -1,4 +1,4 @@
-# Wäkommen
+# Välkommen
 Välkommen till dennna workshop där vi ska gå igenom Azure Arc och dess kapabiliteter. Vi kommer utgå från en grundläggande förståelse av vad Azure Arc är och hur det fungerar, vi kommer vidare se ifall vi kan mappa detta till er verksamhet och era behov genom att testa olika kapabiliteter som låses upp med Azure Arc. Exempelvis updates och övervakning av resurser som är Arc-enabled. 
 
 Vi kommmer genom workshopen att steg för steg bygga på Azure Arc och se vad för möjligheter som finns. Vi kommer utgå från att använda Azure Jumpstart Arcbox för att snabbt komma igång.

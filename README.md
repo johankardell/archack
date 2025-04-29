@@ -22,8 +22,8 @@ Med allt sagt, låt oss hoppa till första [Steg 1: Intro Arc](./Challenge1.md)!
 
 ### Challenges
 - [Challenge 1: Intro Arc & Azure Jumpstart](./Challenge1.md)
-- [Challenge 2: Resource Graph med Arc](./Challenge2.md)
-- [Challenge 3: Tags](./Challenge3.md)
+- [Challenge 2: Onboard your own Arc Machine (optional)](./Challenge2.md)
+- [Challenge 3: Resourcegraph & Tags](./Challenge3.md)
 - [Challenge 4: Monitor](./Challenge4.md)
 - [Challenge 5: SQL](./Challenge5.md)
 - [Challenge 6: Update](./Challenge6.md)

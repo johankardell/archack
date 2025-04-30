@@ -19,7 +19,6 @@ New-AzConnectedMachineRunCommand -ResourceGroupName "thruportal" -MachineName "A
 ## Custom script extension
 Custom script extension är en extension som gör att vi kan köra script på våra maskiner. Detta är bra för att installera programvara eller köra script som vi vill ska köras på maskinen. Funktionaliten är liknande Run Command, skillnaden är att detta körs genom ett extension på maskinen. I verkliga scenarior brukar man köra Customscript för intiala script vid uppsättning av maskiner eller utrullning av programvara.
 - [RunCommand vs Custom Script Extension vs VM Applications](https://devblogs.microsoft.com/azure-vm-runtime/runcommand-vs-custom-script-extension-vs-vm-applications/)
-```markdown
 
 - Inne i Azure Portalen, öppna upp Cloudshell (välj Powershell)
 - Följande PowerShell-script visar hur du kan använda Custom Script Extension för att skapa en textfil direkt med ett inline-script på en server Byt ut plats- och resursnamn till dina egna värden.
@@ -42,8 +41,6 @@ Set-AzConnectedMachineExtension -ResourceGroupName $resourceGroupName `
     -Settings @{ "commandToExecute" = "powershell -Command `$path = 'c:\\lab\\test2.txt'; New-Item -Path `$path -Force; Add-Content -Path `$path -Value 'This is Custom Script Extension'" }
 ```
 - Gå in på er masskin i portalen och gå in på Extensions och verifiera att ni ser Custom Script Extension.
-
-```
 
 ## SSH till er maskin
 

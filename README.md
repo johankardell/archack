@@ -24,9 +24,11 @@ Med allt sagt, låt oss hoppa till första [Steg 1: Intro Arc](./Challenge1.md)!
 - [Challenge 1: Intro Arc & Azure Jumpstart](./Challenge1.md)
 - [Challenge 2: Onboard your own Arc Machine (optional)](./Challenge2.md)
 - [Challenge 3: Resourcegraph & Tags](./Challenge3.md)
-- [Challenge 4: Monitor](./Challenge4.md)
-- [Challenge 5: SQL](./Challenge5.md)
-- [Challenge 6: Update](./Challenge6.md)
+- [Challenge 4: Interact and Manager Arc enabled server](./Challenge4.md)
+- [Challenge 5: Update](./Challenge5.md)
+- [Challenge 6: Monitor](./Challenge6.md)
+- [Challenge 7: Arc Enabled SQL](./Challenge7.md)
+- [Challenge 8: Azure Policy](./Challenge8.md)
 
 
 

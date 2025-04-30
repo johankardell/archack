@@ -29,7 +29,7 @@ Med allt sagt, låt oss hoppa till första [Steg 1: Intro Arc](./Challenge1.md)!
 - [Challenge 6: Monitor](./Challenge6.md)
 - [Challenge 7: Arc Enabled SQL](./Challenge7.md)
 - [Challenge 8: Azure Policy](./Challenge8.md)
-
+- [Challenge 9: Defender for cloud](./Challenge9.md)
 
 
 

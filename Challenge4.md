@@ -7,7 +7,7 @@ Run command exekvererar ett kommando inne på er maskin via Arc agenten. Detta �
 
 - Inne i Azure Portalen, öppna upp Cloudshell (välj Powershell)
 - Kör följande kommando på en av Windows maskinerna (byt ut namnet på maskinen till er maskin samt resursgrupp)
-    - Ifall ni kör på Ubuntu maskinerna är det de adra kodstycket
+    - Ifall ni kör på Ubuntu maskinerna är det de andra kodstycket
 ```powershell
 New-AzConnectedMachineRunCommand -ResourceGroupName "thruportal" -MachineName "ArcBox-Win2K25" -Location "fraceCentral" -RunCommandName "RunCommandName" –SourceScript '$path =  "c:\lab\test.txt"; New-item -Path $path -force; Add-Content -Path $path -Value "This is RunCommand"'
 ```

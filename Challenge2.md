@@ -11,7 +11,7 @@ För att göra detta kommer vi skapa en Azure VM som vi sedan kommer konvertera 
 Det går att skapa en Azure VM på flera olika sätt, antingen via Azure portalen, CLI/Powershell eller Bicep exempelvis. Det finns en bicep template förbered under Scripts/Challenge2/ som vi utgår ifrån.
 
  - I Azure portalen - öppna upp CloudShell (välj Powershell)
- - Skapa upp en fil, kallad main.bicep `code main.bicep` (Detta öpppnar en editor i CloudShell)
+ - Skapa upp en fil, kallad main.bicep `code main.bicep` (Detta öppnar en editor i CloudShell)
  - Klistra in koden från main.bicep filen i editor fönstret och spara filen (Ctrl + S)
     - För att stänga fönstret, hovra muspekaren på högerkanten på tabben och välj close editor ![Close ](./img/cloudshell1.png)
  - Nu ska vi starta bicep deploymenten, kör följande kommando, byt ut ResourceGroupName till er Resursgrupp

@@ -1,6 +1,99 @@
 # Azure Update Manager Exercises
+## Granska uppdateringsstatus
+I denna övning kommer du att granska uppdateringsstatusen för dina servrar i Azure Update Manager.
 
-## Review Update Status
+1. Öppna Microsoft Azure Portal.
+2. Navigera till **Azure Update Manager**. Använd **Search field** högst upp i Azure-portalen för att snabbt hitta resurser och tjänster.
+3. I Azure Update Manager, granska sidan **Overview**. Undersök följande information:
+    - Uppdateringsstatus för maskiner
+    - Status för installation av uppdateringar
+    - Väntande Windows-uppdateringar
+    - Väntande Linux-uppdateringar
+4. I Azure Update Manager, klicka på **Manage > Pending updates**.
+
+---
+
+## Konfigurera underhållskonfiguration
+I denna övning kommer du att konfigurera en schemalagd uppdatering för alla Windows-maskiner två dagar efter den andra tisdagen varje månad.
+
+1. Öppna Microsoft Azure Portal.
+2. Navigera till **Azure Update Manager** med hjälp av **Search field**.
+3. I Azure Update Manager, klicka på **Overview**.
+4. På sidan Overview, klicka på **Schedule updates**.
+5. På sidan **Create a maintenance configuration**, fyll i följande:
+    - **Resource Group**: Skapa en ny resursgrupp med namnet `arcbox-MaintConf`.
+    - **Configuration name**: `MonthlyUpdate`.
+    - **Region**: Använd samma region som din ArcBox-miljö.
+    - **Maintenance scope**: Välj **Guest including Arc-enabled servers**.
+    - **Reboot setting**: Reboot if required.
+6. Klicka på **Add a schedule**.
+7. På sidan **Add/Modify schedule**, konfigurera schemat enligt bilden nedan och klicka sedan på **Save**. ![Update](./img/update1.png)
+
+8. På sidan **Create a maintenance configuration**, klicka på **Next** på följande flikar:
+    - **Basic**
+    - **Resources**
+9. På sidan **Dynamic Scopes**:
+    - Klicka på **Add a dynamic scope**.
+    - På sidan **Select filter by**, välj ett dynamiskt filter för att inkludera alla Arc-servrar med alla OS-typer. Använd eventuellt Azure Tags för att filtrera resurser. Klicka på **Ok**.
+    - Klicka på **Save**.
+10. På sidan **Updates**, inkludera alla uppdateringar och klicka sedan på **Next**.
+11. På sidan **Events**, hoppa över att trigga några händelser (t.ex. skript) före eller efter uppdateringar och klicka sedan på **Next**.
+12. På sidan **Tags**, klicka på **Next**.
+13. På sidan **Review**, klicka på **Create**.
+14. När distributionen är klar:
+     - Navigera till resursgruppen `arcbox-MaintConf` och granska den nya resursen som skapats för underhållskonfigurationen.
+     - Navigera till **Azure Update Manager** och granska underhållskonfigurationen under **Manage > Maintenance configuration**.
+
+Du har nu konfigurerat en underhållskonfiguration för att uppdatera alla Arc-aktiverade servrar varje månad. Denna konfiguration inkluderar alla uppdateringar med ett maximalt underhållsfönster på två timmar. Eftersom den använder ett dynamiskt omfång kommer alla framtida Arc-aktiverade servrar också att inkluderas.
+
+---
+
+## Distribuera uppdateringar
+I denna övning kommer du att köra en engångsuppdatering för dina Windows-servrar. Innan du distribuerar uppdateringar kommer du att kontrollera om det finns nya uppdateringar.
+
+1. Öppna Microsoft Azure Portal.
+2. Navigera till **Azure Update Manager** med hjälp av **Search field**.
+3. I Azure Update Manager, klicka på **Check for updates**.
+4. I fönstret **Select resource and check for updates**, filtrera vyn för att endast visa Arc-aktiverade servrar med Windows OS.
+5. Välj alla Arc-aktiverade servrar i listan.
+6. Klicka på **Check for updates**.
+7. I Microsoft Azure Portal, under **Notifications**, kommer du att se **Assessment in progress**.
+8. När bedömningen är klar:
+    - Navigera till **Azure Update Manager > History**.
+    - Granska bedömningsstatusen för varje maskin.
+9. Navigera till sidan **Azure Update Manager Overview**.
+10. På sidan Overview, klicka på **One-time update**.
+11. I popup-fönstret **Install updates now**, klicka på **Add machines**.
+12. På sidan **Install one-time updates**:
+     - Klicka på **Add machines**.
+     - På sidan **Select resources**, välj alla Windows-maskiner och klicka sedan på **Next**.
+     - På sidan **Updates**, inkludera alla klassificeringar för Windows och klicka sedan på **Next**.
+     - På sidan **Properties**, använd standardinställningarna och klicka sedan på **Next**.
+     - På sidan **Review + install**, granska alla inställningar och klicka på **Install**.
+13. I Microsoft Azure Portal, under **Notifications**, verifiera att du ser ett meddelande om **Install updates request submitted**.
+14. I Azure Update Manager, klicka på **Manage > History**.
+15. På sidan **History**:
+     - Filtrera vyn för att endast visa operationer för **Install updates**.
+     - Verifiera att uppdateringar pågår.
+16. Efter några minuter, bekräfta att alla uppdateringar visar **Succeeded**.
+
+---
+
+## Rapportering
+Azure Update Manager inkluderar en uppsättning rapporter. I denna övning kommer du att granska standardrapporterna.
+
+1. Öppna Microsoft Azure Portal.
+2. Navigera till **Azure Update Manager** med hjälp av **Search field**.
+3. I Azure Update Manager, expandera **Monitoring** och välj **Reports**.
+4. Granska varje flik i standardrapporten **Update Compliance Report**.
+5. På sidan **Reports > Update Compliance Report**, klicka på **Workbooks**.
+6. På sidan **Reports > Gallery**, öppna **Overview workbook**.
+7. I Overview workbook:
+    - Välj din prenumeration.
+    - Granska all information i workbooken.
+
+
+## Review Update Status (English)
 In this exercise, you will review the update status of your servers in Azure Update Manager.
 
 1. Open the Microsoft Azure Portal.
